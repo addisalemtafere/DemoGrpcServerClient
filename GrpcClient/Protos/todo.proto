@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcClient";
+
+package todo;
+
+service TodoItem {
+  rpc CreateTodoItem (CreateTodoItemRequest) returns (CreateTodoItemResponse);
+}
+
+// The request message containing the user's name.
+message CreateTodoItemRequest {
+  string Title = 1;
+  bool IsCompleted = 2;
+}
+
+message CreateTodoItemResponse {
+  string message = 1;
+  int32 id = 2;
+}

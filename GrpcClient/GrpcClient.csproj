@@ -18,6 +18,11 @@
 
     <ItemGroup>
       <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+      <Protobuf Include="Protos\todo.proto" GrpcServices="Client" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Grpcserver\Grpcserver.csproj" />
     </ItemGroup>
 
 </Project>
